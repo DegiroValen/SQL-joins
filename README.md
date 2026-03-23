@@ -1,6 +1,6 @@
 # SQL-joins
 
- ##Introduccion
+ ## Introduccion
 
  Vamos a mostrar un poco de como se usan joins y un par de comandos basicos.
  
