@@ -1,4 +1,4 @@
-# SQL-joins
+# SQL-joins & algebra
 
  ## Introduccion
 
@@ -6,6 +6,7 @@
  
 El contexto es que tome 5 datasets de https://ourworldindata.org/ los cuales dan datos de un topcio de muchos paises, busco unificarlo en una tabla mediante el join
 
+Cuestion 1. Joins
 
  ### Art 1. ¿Que es el cross join y es necesario usarlo en estos casos?
  El cross join no es mas que el producto cartesiano, donde los elementos son cada registro.
@@ -25,5 +26,18 @@ El right join es similar, la difrencia es que el registro siempre presente es el
 
 ### Art 4. ¿Que es el full outer join y es necesario usarlo?
 El full outer join es la union de los registros del right join y left join.
-Si bien es es plausible en principio, los registros extras serian datos muy aisaldos, que dificultarian mas de lo que aportan
+Si bien es es plausible en principio, los registros extras serian datos muy aisaldos, que dificultarian mas de lo que aportan.
 
+## Cuestion 2. Operaciones algebraicas
+
+### Art 1. ¿Que es el intersect y es necesario usarlo?
+El intersect, se toma el comun entre dos tablas cuando tiene las mismas columnas.
+Asumamos que quiero verificar que paises puedo verificar la relacion entre natalidad y densidad de poblacion, voy a usar el intersect para ver de cuales tengo ambos datos
+
+### Art 2. ¿Que es el except y es necesario usarlo?
+El except toma una tabla y le quita los elementos que pertenezcan a otra.
+Asumamos que no quiero la informacion de los paises donde en algun momento los adultos hayan consumido en promedio 10 o mas cigarrillos al dia, pues puede hacerme caer en un sesgo, entonces lo quito.
+
+### Art 3. ¿Que es el union y es necesario usarlo?
+El union une dos tablas con las mismas columnas.
+Asumamos que tambien puedo usar la natalidad en el largo plazo para hacer mi estadistica, entonces voy a unir los paises que tengan esta caracteristica sin importar las otras
